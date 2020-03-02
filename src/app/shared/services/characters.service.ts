@@ -11,4 +11,8 @@ export class CharactersService {
   getData(actualPage){
     return this.httpClient.get('https://rickandmortyapi.com/api/character/?page=' + actualPage);
   }
+  
+  getWithFilter(string){
+    return this.httpClient.get('https://rickandmortyapi.com/api/character/?' + string);
+  }
 }
