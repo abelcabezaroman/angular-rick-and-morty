@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { CharactersService } from '../../shared/services/characters.service';
 
 @Component({
   selector: 'app-home-page',
