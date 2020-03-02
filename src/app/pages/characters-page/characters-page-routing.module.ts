@@ -4,8 +4,12 @@ import { CharactersPageComponent } from "./characters-page.component";
 
 const routes: Routes = [
   {
-    path: "",
+    path: ":page",
     component: CharactersPageComponent
+  },
+  {
+    path: "",
+    redirectTo: "1"
   }
 ];
 
