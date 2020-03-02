@@ -1,24 +1,28 @@
-import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, Validators } from '@angular/forms';
+import { Component, OnInit, Output, EventEmitter } from "@angular/core";
+import { FormGroup, FormControl, FormBuilder } from "@angular/forms";
 
 @Component({
-  selector: 'app-search-form',
-  templateUrl: './search-form.component.html',
-  styleUrls: ['./search-form.component.scss']
+  selector: "app-search-form",
+  templateUrl: "./search-form.component.html",
+  styleUrls: ["./search-form.component.scss"]
 })
-export class SearchFormComponent implements OnInit {
+export class SearchComponent implements OnInit {
+  @Output() character = new EventEmitter();
 
-  myForm;
+  myForm: FormGroup;
 
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(private fb: FormBuilder) {}
 
   ngOnInit(): void {
-    this.myForm =  this.formBuilder.group({
-      email: new FormControl('', [Validators.required, Validators.email, Validators.minLength(3)]),
-      password: new FormControl('')
+    this.myForm = this.fb.group({
+      characterName: new FormControl(""),
+      characterSpecie: new FormControl(""),
+      characterStatus: new FormControl(""),
+      characterGender: new FormControl("")
     });
-
   }
 
-
+  doSomething() {
+    this.character.next(this.myForm.value);
+  }
 }

@@ -40,7 +40,9 @@ export class CharactersPageComponent implements OnInit {
 
   getWithFilter($event) {
     let stringToInsert = "name=" + $event.characterName;
-    stringToInsert = stringToInsert + "&gender=" + $event.characterGender;
+    stringToInsert += "&gender=" + $event.characterGender;
+    stringToInsert += "&species=" + $event.characterSpecie;
+    stringToInsert += "&status=" + $event.characterStatus;
     this.charactersService
       .getWithFilter(stringToInsert)
       .subscribe((res: any) => {
