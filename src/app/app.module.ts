@@ -8,13 +8,13 @@ import { HttpClientModule } from '@angular/common/http';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { PaginationComponent } from './shared/components/pagination/pagination.component';
 import { MenuComponent } from './shared/components/menu/menu.component';
-import { CharactersPageComponent } from './pages/characters-page/characters-page.component';
+
 import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CharactersPageComponent
+    
   ],
   imports: [
     BrowserModule,
