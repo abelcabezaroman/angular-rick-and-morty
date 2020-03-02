@@ -15,7 +15,6 @@ import { CharactersPageComponent } from './pages/characters-page/characters-page
   declarations: [
     AppComponent,
     GalleryComponent,
-    HomePageComponent,
     PaginationComponent,
     MenuComponent,
     LocationsPageComponent,

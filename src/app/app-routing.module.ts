@@ -1,12 +1,11 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { HomePageComponent } from './pages/home-page/home-page.component';
 import { LocationsPageComponent } from './pages/locations-page/locations-page.component';
 import { CharactersPageComponent } from './pages/characters-page/characters-page.component';
 
 
 const routes: Routes = [{
-  path: '', component: HomePageComponent,
+  path: '', loadChildren: () => import('./pages/home-page/home-page.module').then(m => m.HomePageModule),
 }, {
   path: 'characters/:page', component: CharactersPageComponent
 }, {
