@@ -132,10 +132,6 @@
   },
   "defaultProject": "rick-and-morty",
   "cli": {
-<<<<<<< HEAD
     "analytics": false
-=======
-    "analytics": "78eeb010-2315-4890-90b1-a3aa85b84306"
->>>>>>> 3b42a0ed9321872a29e3c4938205317cf7895356
   }
 }
