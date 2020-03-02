@@ -14,9 +14,6 @@ import { SharedModule } from './shared/shared.module';
 @NgModule({
   declarations: [
     AppComponent,
-    GalleryComponent,
-    PaginationComponent,
-    MenuComponent,
     CharactersPageComponent
   ],
   imports: [
