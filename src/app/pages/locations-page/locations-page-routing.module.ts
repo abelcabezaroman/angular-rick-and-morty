@@ -1,9 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { HomePageComponent } from './home-page.component';
+import { LocationsPageComponent } from './locations-page.component';
+
 
 const routes: Routes = [{
-  path: '', component: HomePageComponent,
+  path: ':page', component: LocationsPageComponent,
+}, {
+    path:'', redirectTo:'1'
 }
 ];
 
@@ -11,4 +14,4 @@ const routes: Routes = [{
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class HomePageRoutingModule {}
+export class LocationsPageRoutingModule {}
