@@ -5,13 +5,7 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { CharactersPageComponent } from './characters-page.component';
 
 @NgModule({
-  declarations: [
-    CharactersPageComponent
-  ],
-  imports: [
-    CommonModule,
-    CharactersPageRoutingModule,
-    SharedModule
-  ]
+  declarations: [CharactersPageComponent],
+  imports: [CommonModule,CharactersPageRoutingModule,SharedModule]
 })
 export class CharactersPageModule { }

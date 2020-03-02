@@ -6,9 +6,7 @@ import { MenuComponent } from './components/menu/menu.component';
 
 @NgModule({
   declarations: [GalleryComponent, PaginationComponent, MenuComponent],
-  imports: [
-    CommonModule
-  ],
+  imports: [CommonModule],
   exports: [GalleryComponent, PaginationComponent, MenuComponent]
 })
-export class SharedModule { }
+export class SharedModule {}
