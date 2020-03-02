@@ -10,6 +10,7 @@ import { PaginationComponent } from './shared/components/pagination/pagination.c
 import { MenuComponent } from './shared/components/menu/menu.component';
 import { LocationsPageComponent } from './pages/locations-page/locations-page.component';
 import { CharactersPageComponent } from './pages/characters-page/characters-page.component';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -23,9 +24,10 @@ import { CharactersPageComponent } from './pages/characters-page/characters-page
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
