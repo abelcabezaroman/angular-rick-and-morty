@@ -1,1 +1,35 @@
-<p>search-form works!</p>
+<form class="form" [formGroup]="busqueda" (ngSubmit)="buscar()">
+    <div class="form__name" id="Nombre">
+        <label class="form__label" for="nombre">Nombre: </label>
+        <input class="form__input" type="text" formControlName="nombre"/>
+    </div>
+    <div class="form__status" >
+        <label class="form__label" for="estado">Estado: </label>
+        <select class="form__input" formControlName="estado">
+            <option value="">-</option>
+            <option value="Alive">Vivo</option>
+            <option value="Dead">Muerto</option>
+            <option value="unknown">Desconocido</option>
+        </select>
+    </div>
+    <div class="form__species">
+        <label class="form__label" for="especie">Especie: </label>
+        <input class="form__input" type="text" formControlName="especie"/>
+    </div>
+    <div class="form__type">
+        <label class="form__label" for="tipo">Tipo: </label>
+        <input class="form__input" type="text" formControlName="tipo"/>
+    </div>
+    <div class="form__gender">
+        <label class="form__label" for="genero">Género: </label>
+        <select class="form__input" formControlName="genero">
+            <option value="">-</option>
+            <option value="female">Mujer</option>
+            <option value="male">Hombre</option>
+            <option value="genderless">Sin género</option>
+            <option value="unknown">Desconocido</option>
+        </select>
+    </div>
+    <input class="form__submit" type="submit" value="Buscar"/>
+    <input class="form__reset" type="reset" value="Reset"/>
+</form>

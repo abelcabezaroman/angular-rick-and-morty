@@ -11,6 +11,8 @@ import { Location } from '@angular/common';
 export class CharactersPageComponent implements OnInit {
   characters;
   actualPage = 1;
+  seekPage = "?page=";
+  filterPage = "";
   paginationInfo;
 
   constructor(private location: Location, private activatedRoute: ActivatedRoute, private charactersService: CharactersService) { }
@@ -26,11 +28,27 @@ export class CharactersPageComponent implements OnInit {
 
   getData(actualPage) {
     this.location.replaceState('characters/' + actualPage);
-
-    this.charactersService.getData(actualPage).subscribe((res: any) => {
+    this.seekPage = "?page="+String(actualPage);
+    if(this.filterPage !== ""){
+      this.seekPage += this.filterPage
+    }
+    this.charactersService.getData(this.seekPage).subscribe((res: any) => {
       this.characters = res.results;
       this.paginationInfo = res.info;
     });
+    
   }
 
+  transformFilterToString($event:Object){
+    var filter = "";
+    this.actualPage = 1;
+    for(const campo in $event){
+        if($event[campo] !== "")
+        {
+            filter += `&${campo}=${$event[campo]}`;    
+        }
+    }
+    this.filterPage = filter;
+    this.getData(this.actualPage);
+  }
 }

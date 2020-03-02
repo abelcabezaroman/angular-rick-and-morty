@@ -1,0 +1,41 @@
+@import 'imports/settings.imports';
+*{
+    font-family: Shlop-Regular;
+}
+label{
+    font-size: 25px;
+}
+.form{
+    display:flex;
+    flex-direction:row;
+    justify-content: space-around;
+    color: $color-primary;
+    &__input, &__submit{
+        font-size: 20px;
+    };
+
+    &__name{
+        color: cyan;
+    }
+
+    &__status{
+        color: darkblue;
+    };
+
+    &__species{
+        color: red;
+    }
+
+    &__type{
+        color: darkgreen;
+    }
+
+    &__gender{
+        color: darkgoldenrod;
+    }
+
+    &__submit{
+        background-color: $color-primary;
+        color: red;
+    }
+}
