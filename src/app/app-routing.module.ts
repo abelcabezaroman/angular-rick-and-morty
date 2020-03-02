@@ -7,14 +7,13 @@ import { CharactersPageComponent } from './pages/characters-page/characters-page
 const routes: Routes = [{
   path: '', loadChildren: () => import('./pages/home-page/home-page.module').then(m => m.HomePageModule),
 }, {
-  path: 'characters/:page', component: CharactersPageComponent
-}, {
   path: 'locations/:page', component: LocationsPageComponent
-}, {
-  path: 'characters', redirectTo: 'characters/1'
 }, {
   path: 'locations', redirectTo: 'locations/1'
 },
+{
+  path: 'characters', loadChildren: () => import('./pages/characters-page/characters-page.module').then(m => m.CharactersPageModule)
+}
 ];
 
 @NgModule({
