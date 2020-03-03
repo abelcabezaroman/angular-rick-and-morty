@@ -2,7 +2,8 @@
   <div *ngFor="let character of characters" class="c-gallery__item">
     <figure class="c-gallery__figure">
       <img class="c-gallery__img" src="{{character.image ? character.image : 'assets/img/earth.png'}}" alt="">
-      <figcaption class="c-gallery__figcaption"><span class="c-gallery__text">{{character.name}}</span></figcaption>
+      <figcaption class="c-gallery__figcaption"><span
+        class="c-gallery__text">{{character.name | priorityName:'Rick'}}</span></figcaption>
     </figure>
   </div>
 </div>
