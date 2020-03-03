@@ -1,0 +1,75 @@
+/* You can add global styles to this file, and also import other style files */
+/* Global base
+   ****************************************************************************/
+/* Spacing
+   ****************************************************************************/
+/* Wrapper
+   ****************************************************************************/
+/* Font size
+   ****************************************************************************/
+@font-face {
+  font-family: "Shlop-Regular";
+  font-style: normal;
+  font-weight: normal;
+  src: url("./assets/fonts/shlop.ttf") format("truetype");
+}
+
+.o-content {
+  display: block;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  /* Size variants
+     ****************************************************************************/
+  /* Container reset
+     ****************************************************************************/
+}
+
+.o-content--zero {
+  padding: 0;
+}
+
+.o-content--xs {
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
+.o-content--s {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.o-content--m {
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.o-content--l {
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.o-content--xl {
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.o-content--xxl {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.o-content--no-t {
+  padding-top: 0;
+}
+
+.o-content--no-b {
+  padding-bottom: 0;
+}
+
+.b-primary-text {
+  font-size: 136px;
+  color: #00AFC8;
+  text-align: center;
+  font-family: Shlop-Regular;
+}
+/*# sourceMappingURL=styles.css.map */

@@ -21,16 +21,53 @@ export class CharactersPageComponent implements OnInit {
   }
 
   getPage() {
+    //coge de la ruta el param page y lo iguala a this.actualPage
     this.actualPage = Number(this.activatedRoute.snapshot.paramMap.get('page'));
   }
 
   getData(actualPage) {
-    this.location.replaceState('characters/' + actualPage);
-
+    //reemplazar la ruta 
     this.charactersService.getData(actualPage).subscribe((res: any) => {
       this.characters = res.results;
       this.paginationInfo = res.info;
     });
   }
+  changePage(actualPage){
+    console.log("actualPage is "+actualPage);
+    this.location.replaceState('characters/' + actualPage);
+    this.getData(actualPage);
+  }
+//Método al que llamamos desde el characters-page.html para pasarle el output 
+//que recibimos del componente hijo Formulario
+addFilters($event){
+ 
+  let url= this.transformFiltersToString(this.actualPage,$event);
+  console.log(url);
+  this.getData(url);
 
+}
+//Crear funcion que dado el objeto 
+transformFiltersToString(actualPage,data){
+  console.log(actualPage,data);
+  let filterString='page=' + actualPage;
+  
+    if(data.name){
+      filterString +='&name='+data.name;
+    }
+    if(data.status){
+      filterString +='&status='+data.status;
+    } 
+    if(data.species){
+      filterString +='&species='+data.species;
+    } 
+ 
+  //console.log("filterString es "+filterString);
+  
+  return filterString;
+ /*  {
+    name:'Rick',
+    status:'Alive'
+  }
+  '?page=1&name=Rick&status=Alive' */
+}
 }

@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "characters-page.component.scss"
+    ],
+    "names": [],
+    "file": "characters-page.component.css"
+}

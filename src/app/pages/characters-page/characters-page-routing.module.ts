@@ -4,12 +4,10 @@ import { CharactersPageComponent } from './characters-page.component';
 
 
 const routes: Routes = [{
-  path: '', component: CharactersPageComponent
+  path: ':page', component: CharactersPageComponent
 }, {
-  path: 'characters/:page', component: CharactersPageComponent
-}, {
-  path: 'characters', redirectTo: 'characters/1'
-}
+  path: '', redirectTo: '1'
+}  
 ];
 
 @NgModule({

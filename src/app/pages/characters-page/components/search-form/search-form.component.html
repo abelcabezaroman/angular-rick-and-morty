@@ -1,0 +1,10 @@
+<h1>Búsqueda por Filtros</h1>
+<form [formGroup]="myForm" (ngSubmit)="pasarParametrosAlPadre()">
+    Nombre: <input type="text" formControlName="name" />
+    Status:<select formControlName="status">
+      <option *ngFor="let s of status;let i = index"  [value]="s">{{s}}</option> 
+  </select><br>
+    Species:<input type="text" formControlName="species">
+    <button type="submit">Buscar</button>
+  </form>
+ 

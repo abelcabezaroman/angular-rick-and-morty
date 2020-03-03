@@ -1,0 +1,21 @@
+{
+    "version": 3,
+    "mappings": "AAAA,+EAA+E;AEA/E;gFACgF;AAIhF;gFACgF;AAiBhF;gFACgF;AAKhF;gFACgF;AID9E,UAAU;EACR,WAAW,EAAE,eAAY;EACzB,UAAU,EE5BX,MAAM;EF6BL,WAAW,EE9BZ,MAAM;EF+BL,GAAG,EAPgB,+BAAiC,CAAC,kBAAsB;;;AIzB/E,AAAA,UAAU,CAAC;EACT,OAAO,EAAE,KAAK;EACd,WAAW,ERAD,GAAG;EQCb,cAAc,ERDJ,GAAG;EQGb;kFACgF;EAoChF;kFACgF;CASjF;;AA5CE,AAAD,gBAAO,CAAC;EACN,OAAO,EAAE,CAAC;CACX;;AAEA,AAAD,cAAK,CAAC;EACJ,WAAW,ERCG,GAAoC;EQAlD,cAAc,ERAA,GAAoC;CQCnD;;AAEA,AAAD,aAAI,CAAC;EACH,WAAW,ERHE,GAAmC;EQIhD,cAAc,ERJD,GAAmC;CQKjD;;AAEA,AAAD,aAAI,CAAC;EACH,WAAW,ERNE,IAAmC;EQOhD,cAAc,ERPD,IAAmC;CQQjD;;AAEA,AAAD,aAAI,CAAC;EACH,WAAW,ERVE,IAAmC;EQWhD,cAAc,ERXD,IAAmC;CQYjD;;AAEA,AAAD,cAAK,CAAC;EACJ,WAAW,ERdG,IAAoC;EQelD,cAAc,ERfA,IAAoC;CQgBnD;;AAEA,AAAD,eAAM,CAAC;EACL,WAAW,ERlBI,IAAqC;EQmBpD,cAAc,ERnBC,IAAqC;CQoBrD;;AAKA,AAAD,gBAAO,CAAC;EACN,WAAW,EAAE,CAAC;CACf;;AAEA,AAAD,gBAAO,CAAC;EACN,cAAc,EAAE,CAAC;CAClB;;AEpDH,AAAA,eAAe,CAAA;EACb,SAAS,EAAE,KAAK;EAChB,KAAK,ETFS,OAAO;ESGrB,UAAU,EAAE,MAAM;EAClB,WAAW,EAAE,aAAa;CAC3B",
+    "sources": [
+        "styles.scss",
+        "styles/imports/_settings.imports.scss",
+        "styles/settings/_base.settings.scss",
+        "styles/settings/_colors.settings.scss",
+        "styles/settings/_paths.settings.scss",
+        "styles/imports/_tools.imports.scss",
+        "styles/tools/_font-face.tools.scss",
+        "styles/imports/_generic.imports.scss",
+        "styles/generic/_fonts.generic.scss",
+        "styles/imports/_objects.imports.scss",
+        "styles/objects/_content.objects.scss",
+        "styles/imports/_blocks.imports.scss",
+        "styles/blocks/_primary-text.blocks.scss"
+    ],
+    "names": [],
+    "file": "styles.css"
+}
