@@ -1,6 +1,19 @@
-<form [formGroup]="searchForm">
-    <label formControlName="name">Nombre: </label>
-    <input type="text" formControlName="name" />
 
-    <button type="button">Buscar</button>
+<form [formGroup]="searchForm" (ngSubmit)="search()" class="c-searchForm">
+    <div class="formGroup">
+        <label class="formItem">  Nombre    </label>
+        <input type="text" formControlName="name" />
+        <button type="submit" class="formButton"> Buscar </button>
+    </div>
+
+    <div class="formGroup">
+        <label class="formItem">  Status   </label>
+        
+        <select name="select" formControlName="status">
+            <option value="alive" selected>Alive</option> 
+            <option value="dead">Dead</option>
+            <option value="unknow">Unknow</option>
+        </select>
+        <button type="submit" class="formButton"> Buscar </button>
+    </div>
 </form>

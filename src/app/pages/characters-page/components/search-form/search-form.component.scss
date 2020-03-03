@@ -1,0 +1,26 @@
+@import 'imports/settings.imports';
+
+.c-searchForm{
+    font-size: 122%;
+    font-family: Shlop-Regular;
+    color: $color-primary;
+    margin-left: 2%;
+}
+
+.formGroup{
+    width: 20%;
+    height: auto;
+    display: inline-block;
+    margin-left: 1%;
+}
+
+.formItem{
+    padding-right: 2%;
+}
+
+.formButton{
+    color: $color-primary;
+    background-color:whitesmoke;
+    font-family: Shlop-Regular;
+    margin-left: 2%;
+}

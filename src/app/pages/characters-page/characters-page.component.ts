@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
 import { CharactersService } from '../../shared/services/characters.service';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
@@ -10,8 +10,10 @@ import { Location } from '@angular/common';
 })
 export class CharactersPageComponent implements OnInit {
   characters;
-  actualPage = 1;
+ // actualPage = 1;
   paginationInfo;
+
+  @Output() actualPage: number = 1;
 
   constructor(private location: Location, private activatedRoute: ActivatedRoute, private charactersService: CharactersService) { }
 
@@ -31,6 +33,10 @@ export class CharactersPageComponent implements OnInit {
       this.characters = res.results;
       this.paginationInfo = res.info;
     });
+  }
+
+  filter(actualPage, formValuesEmitter){
+    
   }
 
 }
