@@ -5,9 +5,10 @@ import { PaginationComponent } from './components/pagination/pagination.componen
 import { MenuComponent } from './components/menu/menu.component';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import { PriorityNamePipe } from './pipes/priority-name.pipe';
 
 @NgModule({
-  declarations: [GalleryComponent, PaginationComponent, MenuComponent],
+  declarations: [GalleryComponent, PaginationComponent, MenuComponent, PriorityNamePipe],
   imports: [CommonModule, RouterModule, FormsModule],
   exports: [GalleryComponent, PaginationComponent, MenuComponent]
 })
