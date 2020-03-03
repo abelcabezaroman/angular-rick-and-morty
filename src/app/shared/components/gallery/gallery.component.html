@@ -3,7 +3,11 @@
     <figure class="c-gallery__figure">
       <img class="c-gallery__img" src="{{character.image ? character.image : 'assets/img/earth.png'}}" alt="">
       <figcaption class="c-gallery__figcaption"><span
-        class="c-gallery__text">{{character.name | priorityName:'Rick'}}</span></figcaption>
+        class="c-gallery__text">{{character.name | priorityName:'Rick'}}</span><br>
+        <!--imageGender es nombre de funcion Pipe-->
+        <span class="gender">{{character.gender}}
+        <img src="{{character.gender | imageGender}}">
+        </span></figcaption>
     </figure>
   </div>
 </div>

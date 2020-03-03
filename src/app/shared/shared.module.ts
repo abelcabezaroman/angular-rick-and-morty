@@ -6,9 +6,10 @@ import { MenuComponent } from './components/menu/menu.component';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { PriorityNamePipe } from './pipes/priority-name.pipe';
+import { ImageGenderPipe } from './pipes/image-gender.pipe';
 
 @NgModule({
-  declarations: [GalleryComponent, PaginationComponent, MenuComponent, PriorityNamePipe],
+  declarations: [GalleryComponent, PaginationComponent, MenuComponent, PriorityNamePipe,ImageGenderPipe],
   imports: [CommonModule, RouterModule, FormsModule],
   exports: [GalleryComponent, PaginationComponent, MenuComponent]
 })

@@ -17,7 +17,7 @@ export class CharactersPageComponent implements OnInit {
 
   ngOnInit(): void {
     this.getPage();
-    this.getData(this.actualPage);
+    this.getData(this.transformFiltersToString(this.actualPage,null));
   }
 
   getPage() {
@@ -26,7 +26,7 @@ export class CharactersPageComponent implements OnInit {
   }
 
   getData(actualPage) {
-    //reemplazar la ruta 
+    
     this.charactersService.getData(actualPage).subscribe((res: any) => {
       this.characters = res.results;
       this.paginationInfo = res.info;
@@ -34,8 +34,10 @@ export class CharactersPageComponent implements OnInit {
   }
   changePage(actualPage){
     console.log("actualPage is "+actualPage);
+    //reemplazar la ruta a characters/numero
     this.location.replaceState('characters/' + actualPage);
-    this.getData(actualPage);
+    let url= this.transformFiltersToString(actualPage,null);
+    this.getData(url);
   }
 //Método al que llamamos desde el characters-page.html para pasarle el output 
 //que recibimos del componente hijo Formulario
@@ -47,22 +49,21 @@ addFilters($event){
 
 }
 //Crear funcion que dado el objeto 
-transformFiltersToString(actualPage,data){
+transformFiltersToString(actualPage, data=null){
   console.log(actualPage,data);
   let filterString='page=' + actualPage;
-  
+  if(data!=null){
     if(data.name){
-      filterString +='&name='+data.name;
-    }
-    if(data.status){
-      filterString +='&status='+data.status;
-    } 
-    if(data.species){
-      filterString +='&species='+data.species;
-    } 
- 
-  //console.log("filterString es "+filterString);
-  
+    filterString +='&name='+data.name;
+  }
+  if(data.status){
+    filterString +='&status='+data.status;
+  } 
+  if(data.species){
+    filterString +='&species='+data.species;
+  } 
+}
+  //console.log("filterString es "+filterString)
   return filterString;
  /*  {
     name:'Rick',
