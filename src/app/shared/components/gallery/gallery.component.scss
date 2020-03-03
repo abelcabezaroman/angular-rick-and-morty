@@ -26,11 +26,13 @@
 
   &__figcaption{
     width: 100%;
-    display: table;
-    table-layout: fixed;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items:center;
   }
   &__text{
-    font-size: 36px;
+    font-size: 27px;
     font-family: Shlop-Regular;
     color: $color-primary;
     text-align: center;
@@ -38,5 +40,14 @@
     overflow: hidden;
     white-space: nowrap;
     display: table-cell;
+  }
+  &__Vivo{
+    color: lightgreen;
+  }
+  &__Muerto{
+    color: red;
+  }
+  &__Desconocido{
+    color: grey;
   }
 }

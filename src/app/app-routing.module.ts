@@ -7,7 +7,9 @@ const routes: Routes = [{
   path: 'characters', loadChildren: () => import('./pages/characters-page/characters-page.module').then(m=>m.CharactersPageModule),
 }, {
   path: 'locations', loadChildren: () => import('./pages/locations-page/locations-page.module').then(m => m.LocationsPageModule),
-}, 
+}, {
+  path: 'episodes', loadChildren: () => import('./pages/episodes-page/episodes-page.module').then(m => m.EpisodesPageModule),
+}
 ];
 
 @NgModule({

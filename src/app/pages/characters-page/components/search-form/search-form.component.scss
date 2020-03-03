@@ -10,12 +10,13 @@ label{
     flex-direction:row;
     justify-content: space-around;
     color: $color-primary;
-    &__input, &__submit{
+    &__input, &__submit, &__reset{
         font-size: 20px;
+        border: 2px solid red;
     };
 
     &__name{
-        color: cyan;
+        color: olive;
     }
 
     &__status{
@@ -37,5 +38,9 @@ label{
     &__submit{
         background-color: $color-primary;
         color: red;
+    }
+    &__reset{
+        background-color: $color-primary;
+        color: greenyellow;
     }
 }
