@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CharactersService } from '../../shared/services/characters.service';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
+import { plus } from "../../shared/utils/plus.util";
 
 @Component({
   selector: 'app-characters-page',
@@ -22,6 +23,7 @@ export class CharactersPageComponent implements OnInit {
 
   getPage() {
     this.actualPage = Number(this.activatedRoute.snapshot.paramMap.get('page'));
+    console.log('##ABEL## >> CharactersPageComponent >>  getPage', plus(3, 5));
   }
 
   getData(actualPage) {
@@ -32,5 +34,6 @@ export class CharactersPageComponent implements OnInit {
       this.paginationInfo = res.info;
     });
   }
+
 
 }
