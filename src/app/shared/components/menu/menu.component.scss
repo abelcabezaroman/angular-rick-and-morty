@@ -11,5 +11,8 @@
     font-size: 48px;
     text-decoration: none;
     margin: 0 24px;
+    &--active{
+      border-bottom: 4px solid;
+    }
   }
 }
