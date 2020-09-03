@@ -9,7 +9,7 @@ import { CharactersSimpleService } from "../../../../shared/services/characters-
 })
 export class CharacterSimpleDetailPageComponent implements OnInit {
 
-  character = {};
+  character: any = {};
 
   constructor(private route: ActivatedRoute, private charactersSimpleService: CharactersSimpleService) { }
 
