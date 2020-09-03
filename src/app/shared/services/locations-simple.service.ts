@@ -8,7 +8,7 @@ export class LocationsSimpleService {
 
   constructor(private httpClient: HttpClient) { }
 
-  getDataSimple(){
+  getLocations(){
     return this.httpClient.get('https://rickandmortyapi.com/api/location/');
   }
 }

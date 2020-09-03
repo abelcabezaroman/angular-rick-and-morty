@@ -13,7 +13,7 @@ export class LocationsSimplePageComponent implements OnInit {
   constructor(private LocationsSimpleService: LocationsSimpleService) { }
 
   ngOnInit(): void {
-    this.LocationsSimpleService.getDataSimple().subscribe( (res:any) => {
+    this.LocationsSimpleService.getLocations().subscribe( (res:any) => {
       this.locations = res.results;
       console.log('##ABEL## >> AppComponent >>  res', res.results);
     });

@@ -1,8 +1,8 @@
 <div class="c-gallery">
   <div class="row">
     <div *ngFor="let character of characters" class="col-12 col-sm-6 col-md-4 col-lg-3">
-      <figure class="c-gallery__figure">
-        <button (click)="addNewFavoriteCharacter(character)">Add To favorites</button>
+      <figure class="c-gallery__figure" routerLink="/characters/{{character.id}}">
+        <button (click)="addNewFavoriteCharacter($event, character)">Add To favorites</button>
         <img class="c-gallery__img" src="{{character.image ? character.image : 'assets/img/earth.png'}}" alt=""/>
         <figcaption class="c-gallery__figcaption"><span
           class="c-gallery__text">{{character.name | priorityName:'Rick'}}</span></figcaption>

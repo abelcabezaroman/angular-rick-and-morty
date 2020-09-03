@@ -16,7 +16,7 @@ export class AppComponent implements OnInit{
 
   ngOnInit(){
     //
-    // this.charactersSimpleService.getDataSimple().subscribe( (res:any) => {
+    // this.charactersSimpleService.getCharacters().subscribe( (res:any) => {
     //   this.characters = res.results;
     //   console.log('##ABEL## >> AppComponent >>  res', res.results);
     // });

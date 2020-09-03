@@ -13,7 +13,7 @@ export class CharacterSimplePageComponent implements OnInit {
   constructor(private charactersSimpleService: CharactersSimpleService) { }
 
   ngOnInit(): void {
-    this.charactersSimpleService.getDataSimple().subscribe( (res:any) => {
+    this.charactersSimpleService.getCharacters().subscribe( (res:any) => {
       this.characters = res.results;
       console.log('##ABEL## >> AppComponent >>  res', res.results);
     });

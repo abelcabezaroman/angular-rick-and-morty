@@ -1,6 +1,4 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { CharactersService } from '../../services/characters.service';
 import { FavoritesService } from "../../services/local/favorites.service";
 
 @Component({
@@ -10,7 +8,7 @@ import { FavoritesService } from "../../services/local/favorites.service";
 })
 export class GalleryComponent implements OnInit {
 
-  @Input() characters;
+  @Input() characters = [];
 
   constructor(private favoritesService: FavoritesService) { }
 
@@ -18,7 +16,8 @@ export class GalleryComponent implements OnInit {
 
   }
 
-  addNewFavoriteCharacter(character){
+  addNewFavoriteCharacter($event, character) {
+    $event.stopPropagation();
     this.favoritesService.addNewFavoriteCharacter(character)
   }
 
