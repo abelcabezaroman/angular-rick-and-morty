@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, Validators } from '@angular/forms';
+import { FormBuilder } from "@angular/forms";
 
 @Component({
   selector: 'app-search-form',
@@ -8,17 +8,17 @@ import { FormBuilder, FormControl, Validators } from '@angular/forms';
 })
 export class SearchFormComponent implements OnInit {
 
-  myForm;
+  formGroupSearchForm;
 
   constructor(private formBuilder: FormBuilder) { }
 
   ngOnInit(): void {
-    this.myForm =  this.formBuilder.group({
-      email: new FormControl('', [Validators.required, Validators.email, Validators.minLength(3)]),
-      password: new FormControl('')
-    });
-
+    this.formGroupSearchForm = this.formBuilder.group({
+      name: ['Rick']
+    })
   }
 
-
+  filter(){
+    console.log('##ABEL## >> SearchFormComponent >>  filter', this.formGroupSearchForm.value);
+  }
 }
