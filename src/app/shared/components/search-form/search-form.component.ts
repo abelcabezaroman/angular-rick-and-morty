@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormBuilder } from "@angular/forms";
 
 @Component({
@@ -10,6 +10,8 @@ export class SearchFormComponent implements OnInit {
 
   formGroupSearchForm;
 
+  @Output() filterEmitter = new EventEmitter()
+
   constructor(private formBuilder: FormBuilder) { }
 
   ngOnInit(): void {
@@ -18,7 +20,7 @@ export class SearchFormComponent implements OnInit {
     })
   }
 
-  filter(){
-    console.log('##ABEL## >> SearchFormComponent >>  filter', this.formGroupSearchForm.value);
+  filter() {
+    this.filterEmitter.emit(this.formGroupSearchForm.value);
   }
 }

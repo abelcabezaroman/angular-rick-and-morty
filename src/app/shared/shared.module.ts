@@ -7,9 +7,10 @@ import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PriorityNamePipe } from './pipes/priority-name.pipe';
 import { SearchFormComponent } from './components/search-form/search-form.component';
+import { MultiplyPipe } from './pipes/multiply.pipe';
 
 @NgModule({
-  declarations: [GalleryComponent, PaginationComponent, MenuComponent, PriorityNamePipe, SearchFormComponent],
+  declarations: [GalleryComponent, PaginationComponent, MenuComponent, PriorityNamePipe, SearchFormComponent, MultiplyPipe],
   imports: [CommonModule, RouterModule, FormsModule, ReactiveFormsModule],
   exports: [GalleryComponent, PaginationComponent, MenuComponent, SearchFormComponent]
 })

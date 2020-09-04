@@ -19,4 +19,10 @@ export class CharacterSimplePageComponent implements OnInit {
     });
   }
 
+  filterCharacters($event){
+    this.charactersSimpleService.getCharactersFiltered($event.name).subscribe((res:any) =>{
+      this.characters = res.results;
+    })
+  }
+
 }

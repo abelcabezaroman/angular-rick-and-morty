@@ -9,6 +9,7 @@ import { FavoritesService } from "../../services/local/favorites.service";
 export class GalleryComponent implements OnInit {
 
   @Input() characters = [];
+  today: number = Date.now();
 
   constructor(private favoritesService: FavoritesService) { }
 
