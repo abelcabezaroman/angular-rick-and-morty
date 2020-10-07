@@ -1,0 +1,19 @@
+<form [formGroup]="contactForm" (submit)="contactMe()">
+    <label for="name">Name</label>
+    <input id="name" type="text" formControlName="name">
+
+    <label for="email">Email</label>
+    <input id="email" type="email" formControlName="email">
+
+    <label for="message">Message</label>
+    <textarea id="message" formControlName="message"></textarea>
+    <span *ngIf="submited && !contactForm.get('message').valid">The value of message need to be more than 55 characters and less than 255</span>
+
+    <label for="favorite">Favorite</label>
+    <select id="favorite" name="favorite" id="favorite" formControlName="favorite">
+        <option value="rick">Rick</option>
+        <option value="morty">Morty</option>
+    </select>
+
+    <input type="submit">
+</form>

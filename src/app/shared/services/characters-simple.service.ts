@@ -31,7 +31,7 @@ export class CharactersSimpleService {
 
 
   getCharacter(idCharacter) {
-    return this.httpClient.get(environment.url + 'character/' + idCharacter);
+    return this.httpClient.get('https://rickandmortyapi.com/api/character/' + idCharacter);
   }
 
   //

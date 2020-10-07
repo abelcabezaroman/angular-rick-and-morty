@@ -8,13 +8,13 @@ import { FavoritesLocalService } from '../../services/local/favorites-local.serv
 })
 export class GalleryComponent implements OnInit {
 
-  @Input() characters = [];
-  today: number = Date.now();
+  @Input() items = [];
+  today = Date.now();
 
   constructor(private favoritesLocalService: FavoritesLocalService) { }
 
   ngOnInit(): void {
-
+    console.log(this.today);
   }
 
   addFavorite(character) {

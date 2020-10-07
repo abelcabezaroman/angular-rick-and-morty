@@ -1,12 +1,13 @@
 <div class="c-gallery">
   <div class="row">
-    <div *ngFor="let character of characters" class="col-12 col-sm-6 col-md-4 col-lg-3">
-      <button (click)="addFavorite(character)">Add to favorites</button>
-      <figure class="c-gallery__figure" routerLink="/characters/{{character.id}}">
-        <img class="c-gallery__img" src="{{character.image ? character.image : 'assets/img/earth.png'}}" alt=""/>
+    <div *ngFor="let item of items" class="col-12 col-sm-6 col-md-4 col-lg-3">
+      <button (click)="addFavorite(item)">Add to favorites</button>
+      <figure class="c-gallery__figure" routerLink="/characters/{{item.id}}">
+        <img class="c-gallery__img" src="{{item.image ? item.image : 'assets/img/earth.png'}}" alt=""/>
         <figcaption class="c-gallery__figcaption"><span
-          class="c-gallery__text">{{character.name | priorityName:'Rick'}}</span></figcaption>
-<!--        <p>{{2 | multiply: 4 }}</p>-->
+          class="c-gallery__text">{{item.name | priorityName:'Rick': '**'}}</span></figcaption>
+       <!-- <p>{{2 | multiply: 4 }}</p> -->
+        <!-- <p>{{today | date:'dd-MM-yyyy'}}</p>-->
       </figure>
     </div>
   </div>

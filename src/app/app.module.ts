@@ -9,9 +9,10 @@ import { LocationsSimplePageComponent } from './pages/locations-simple-page/loca
 import { FavoritesPageComponent } from "./pages/favorites-page/favorites-page.component";
 import { CharacterSimpleDetailPageComponent } from './pages/character-simple-page/pages/character-simple-detail-page/character-simple-detail-page.component';
 import { ReactiveFormsModule } from "@angular/forms";
+import { ContactPageComponent } from './pages/contact-page/contact-page.component';
 
 @NgModule({
-  declarations: [AppComponent, CharacterSimplePageComponent, LocationsSimplePageComponent, FavoritesPageComponent, CharacterSimpleDetailPageComponent],
+  declarations: [AppComponent, CharacterSimplePageComponent, LocationsSimplePageComponent, FavoritesPageComponent, CharacterSimpleDetailPageComponent, ContactPageComponent],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, SharedModule, ReactiveFormsModule],
   providers: [],
   bootstrap: [AppComponent]
