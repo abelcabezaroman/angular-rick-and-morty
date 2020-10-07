@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FavoritesService } from "../../shared/services/local/favorites.service";
+import { FavoritesLocalService } from 'src/app/shared/services/local/favorites-local.service';
 
 @Component({
   selector: 'app-favorites-characters-page',
@@ -8,11 +8,11 @@ import { FavoritesService } from "../../shared/services/local/favorites.service"
 })
 export class FavoritesPageComponent implements OnInit {
 
-  favoritesCharacters;
-  constructor(private favoritesService: FavoritesService) { }
+  favorites;
+  constructor(private favoritesLocalService: FavoritesLocalService) { }
 
   ngOnInit(): void {
-    this.favoritesCharacters = this.favoritesService.getFavoritesCharacters();
+    this.favorites = this.favoritesLocalService.getFavorites();
   }
 
 }

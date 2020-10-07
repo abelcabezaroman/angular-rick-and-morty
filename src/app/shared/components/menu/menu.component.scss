@@ -4,7 +4,8 @@
   display: flex;
   width: 100%;
   justify-content: center;
-
+  flex-wrap: wrap;
+  
   &__link {
     color: $color-primary;
     font-family: Shlop-Regular;

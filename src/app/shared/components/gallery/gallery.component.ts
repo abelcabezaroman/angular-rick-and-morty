@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { FavoritesService } from "../../services/local/favorites.service";
+import { FavoritesLocalService } from '../../services/local/favorites-local.service';
 
 @Component({
   selector: 'app-gallery',
@@ -11,15 +11,14 @@ export class GalleryComponent implements OnInit {
   @Input() characters = [];
   today: number = Date.now();
 
-  constructor(private favoritesService: FavoritesService) { }
+  constructor(private favoritesLocalService: FavoritesLocalService) { }
 
   ngOnInit(): void {
 
   }
 
-  addNewFavoriteCharacter($event, character) {
-    $event.stopPropagation();
-    this.favoritesService.addNewFavoriteCharacter(character)
+  addFavorite(character) {
+    this.favoritesLocalService.addNewFavorite(character)
   }
 
 

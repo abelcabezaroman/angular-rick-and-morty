@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { CharactersSimpleService } from "../../shared/services/characters-simple.service";
+import { take } from "rxjs/operators";
+import { CharactersSimpleService } from 'src/app/shared/services/characters-simple.service';
 
 @Component({
   selector: 'app-character-simple-page',
@@ -13,14 +14,20 @@ export class CharacterSimplePageComponent implements OnInit {
   constructor(private charactersSimpleService: CharactersSimpleService) { }
 
   ngOnInit(): void {
-    this.charactersSimpleService.getCharacters().subscribe( (res:any) => {
+    this.charactersSimpleService.getCharacters().pipe(take(1)).subscribe((res: any) => {
       this.characters = res.results;
       console.log('##ABEL## >> AppComponent >>  res', res.results);
     });
   }
 
-  filterCharacters($event){
-    this.charactersSimpleService.getCharactersFiltered($event.name).subscribe((res:any) =>{
+
+
+
+
+
+  
+  filterCharacters($event) {
+    this.charactersSimpleService.getCharactersFiltered($event.name).pipe(take(1)).subscribe((res: any) => {
       this.characters = res.results;
     })
   }

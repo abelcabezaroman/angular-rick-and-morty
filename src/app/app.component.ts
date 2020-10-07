@@ -12,7 +12,7 @@ export class AppComponent implements OnInit{
 
   // characters: [];
 
-  constructor(private charactersSimpleService: CharactersSimpleService) {}
+  constructor() {}
 
   ngOnInit(){
     //

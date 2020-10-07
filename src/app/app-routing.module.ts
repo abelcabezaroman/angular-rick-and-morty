@@ -5,7 +5,7 @@ import { CharacterSimplePageComponent } from "./pages/character-simple-page/char
 import { LocationsSimplePageComponent } from "./pages/locations-simple-page/locations-simple-page.component";
 import { FavoritesPageComponent } from "./pages/favorites-page/favorites-page.component";
 import { CharacterSimpleDetailPageComponent } from "./pages/character-simple-page/pages/character-simple-detail-page/character-simple-detail-page.component";
-
+//
 // const routes: Routes = [{
 //   path: '', loadChildren: () => import('./pages/home-page/home-page.module').then(m => m.HomePageModule),
 // }, {
