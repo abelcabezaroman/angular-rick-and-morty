@@ -1,8 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CharactersService } from '../../shared/services/characters.service';
-import { ActivatedRoute } from '@angular/router';
-import { Location } from '@angular/common';
-import { plus } from "../../shared/utils/plus.util";
+import { CharactersService } from 'src/app/shared/services/characters.service';
 
 @Component({
   selector: 'app-characters-page',
@@ -10,30 +7,23 @@ import { plus } from "../../shared/utils/plus.util";
   styleUrls: ['./characters-page.component.scss']
 })
 export class CharactersPageComponent implements OnInit {
-  characters;
-  actualPage = 1;
-  paginationInfo;
 
-  constructor(private location: Location, private activatedRoute: ActivatedRoute, private charactersService: CharactersService) { }
+  characters;
+
+  constructor(private charactersService: CharactersService) { }
 
   ngOnInit(): void {
-    this.getPage();
-    this.getData(this.actualPage);
-  }
+    // fetch('https://rickandmortyapi.com/api/character').then(res => res.json()).then(res =>{
+    //   console.log(res)
+    // })
 
-  getPage() {
-    this.actualPage = Number(this.activatedRoute.snapshot.paramMap.get('page'));
-    console.log('##ABEL## >> CharactersPageComponent >>  getPage', plus(3, 5));
-  }
+    // this.http.get('https://rickandmortyapi.com/api/character').subscribe(res => {
+    //   console.log(res);
+    // });
 
-  getData(actualPage) {
-    this.location.replaceState('characters/' + actualPage);
-
-    this.charactersService.getData(actualPage).subscribe((res: any) => {
+    this.charactersService.getCharacters().subscribe((res: any) => {
       this.characters = res.results;
-      this.paginationInfo = res.info;
     });
   }
-
 
 }

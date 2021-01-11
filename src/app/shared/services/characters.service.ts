@@ -1,20 +1,15 @@
-import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { environment } from "../../../environments/environment";
+import { Injectable } from '@angular/core';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CharactersService {
 
-  constructor(private httpClient: HttpClient) { }
+  constructor(private http: HttpClient) { }
 
-  getData(actualPage){
-    return this.httpClient.get(environment.url + 'character/?page=' + actualPage);
+  getCharacters(){
+    return this.http.get('https://rickandmortyapi.com/api/character');
   }
-
-  // postDataSimple(){
-  //   return this.httpClient.post('https://rickandmortyapi.com/api/character/', {data: 1231});
-  // }
-
+  
 }

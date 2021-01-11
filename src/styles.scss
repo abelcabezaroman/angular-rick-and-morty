@@ -1,12 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
-@import 'styles/imports/settings.imports';
-@import 'styles/imports/tools.imports';
-@import 'styles/imports/generic.imports';
-@import 'styles/imports/objects.imports';
-@import 'styles/imports/blocks.imports';
-
 @import '~bootstrap/scss/bootstrap-grid';
 
-body{
-  margin: 0;
+figure, body{
+    margin: 0;
 }

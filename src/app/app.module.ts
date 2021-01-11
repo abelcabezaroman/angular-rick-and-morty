@@ -1,19 +1,28 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HomePageComponent } from './pages/home-page/home-page.component';
+import { MenuComponent } from './core/components/menu/menu.component';
+import { CharactersPageComponent } from './pages/characters-page/characters-page.component';
 import { HttpClientModule } from '@angular/common/http';
-import { SharedModule } from './shared/shared.module';
-import { CharacterSimplePageComponent } from './pages/character-simple-page/character-simple-page.component';
-import { LocationsSimplePageComponent } from './pages/locations-simple-page/locations-simple-page.component';
-import { FavoritesPageComponent } from "./pages/favorites-page/favorites-page.component";
-import { CharacterSimpleDetailPageComponent } from './pages/character-simple-page/pages/character-simple-detail-page/character-simple-detail-page.component';
-import { ReactiveFormsModule } from "@angular/forms";
+import { GalleryComponent } from './shared/components/gallery/gallery.component';
 
 @NgModule({
-  declarations: [AppComponent, CharacterSimplePageComponent, LocationsSimplePageComponent, FavoritesPageComponent, CharacterSimpleDetailPageComponent],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule, SharedModule, ReactiveFormsModule],
+  declarations: [
+    AppComponent,
+    HomePageComponent,
+    MenuComponent,
+    CharactersPageComponent,
+    GalleryComponent
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }

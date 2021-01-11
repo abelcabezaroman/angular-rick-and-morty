@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { plus } from "../../shared/utils/plus.util";
 
 @Component({
   selector: 'app-home-page',
@@ -11,8 +10,6 @@ export class HomePageComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    console.log('##ABEL## >> HomePageComponent >>  ngOnInit', plus(3,5));
   }
-
 
 }
