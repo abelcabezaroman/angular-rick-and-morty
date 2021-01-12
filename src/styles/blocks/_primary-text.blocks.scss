@@ -2,7 +2,7 @@
     font-size: 135px;
     color: var(--color-primary);
     text-align: center;
-    font-family: Shlop-Regular;
+    font-family: var(--font-family-base);
     &--dark{ // b-primary-text--dark
         color: #000000;
     }
