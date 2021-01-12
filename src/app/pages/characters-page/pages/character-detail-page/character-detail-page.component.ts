@@ -9,14 +9,14 @@ import { CharactersService } from 'src/app/shared/services/characters.service';
 })
 export class CharacterDetailPageComponent implements OnInit {
 
-  character;
+  character: any;
 
   constructor(private route: ActivatedRoute, private charactersService: CharactersService) { }
 
   ngOnInit() {
     this.route.paramMap.subscribe(params => {
       const idCharacter = params.get('idCharacter');
-      this.charactersService.getCharacter(idCharacter).subscribe((character) => {
+      this.charactersService.getCharacter(idCharacter).subscribe(character => {
         this.character = character;
       })
     });

@@ -1,26 +1,25 @@
-
 .c-gallery {
-    &__figure{
-      margin: 16px 0;
-      text-align: center;
-      cursor: pointer;
-    }
-  
-    &__img {
-      border: 4px solid #00AFC8;
-      width: 100%;
-      object-fit: cover;
-    }
-  
-    &__text{
-      font-size: 36px;
-      font-family: Shlop-Regular;
-      color: #00AFC8;
-      text-align: center;
-      text-overflow: ellipsis;
-      overflow: hidden;
-      white-space: nowrap;
-      display: table-cell;
-      text-transform: lowercase;
-    }
+  &__figure{
+    margin: 16px 0;
+    text-align: center;
+    cursor: pointer;
   }
+
+  &__img {
+    border: 4px solid #00AFC8;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  &__text{
+    font-size: 36px;
+    font-family: Shlop-Regular;
+    color: #00AFC8;
+    text-align: center;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    display: table-cell;
+    text-transform: lowercase;
+  }
+}

@@ -1,0 +1,27 @@
+.b-primary-text{
+    font-size: 135px;
+    color: #00AFC8;
+    text-align: center;
+    font-family: Shlop-Regular;
+    &--dark{ // b-primary-text--dark
+        color: #000000;
+    }
+    &--small{
+        font-size: 24px
+    }
+}
+
+// .b-primary-text{
+//   font-size: 135px;
+//   color: #00AFC8;
+//   text-align: center;
+//   font-family: Shlop-Regular;
+// }
+
+// .b-primary-text--dark{
+//   color: #000000;
+// }
+
+// .b-primary-text--small{
+//   font-size: 24px
+// }
