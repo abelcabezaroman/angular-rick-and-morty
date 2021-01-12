@@ -9,6 +9,7 @@ import { CharactersService } from 'src/app/shared/services/characters.service';
 export class CharactersPageComponent implements OnInit {
 
   characters;
+  paginationInfo = {};
 
   constructor(private charactersService: CharactersService) { }
 
@@ -21,8 +22,13 @@ export class CharactersPageComponent implements OnInit {
     //   console.log(res);
     // });
 
-    this.charactersService.getCharacters().subscribe((res: any) => {
+    this.getCharacters(1);
+  }
+
+  getCharacters(page) {
+    this.charactersService.getCharacters(page).subscribe((res: any) => {
       this.characters = res.results;
+      this.paginationInfo = { ...res.info, page };
     });
   }
 

@@ -1,0 +1,3 @@
+<button (click)="newPageEmit(paginationInfo.page - 1)" *ngIf="paginationInfo.page > 1"><</button>
+{{paginationInfo.page}}
+<button (click)="newPageEmit(paginationInfo.page + 1)" *ngIf="paginationInfo.page < paginationInfo.pages">></button>
