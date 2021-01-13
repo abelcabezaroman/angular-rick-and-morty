@@ -10,6 +10,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { GalleryComponent } from './shared/components/gallery/gallery.component';
 import { PaginationComponent } from './shared/components/pagination/pagination.component';
 import { CharacterDetailPageComponent } from './pages/characters-page/pages/character-detail-page/character-detail-page.component';
+import { ContactPageComponent } from './pages/contact-page/contact-page.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { LocationsPageComponent } from './pages/locations-page/locations-page.component';
 
 @NgModule({
   declarations: [
@@ -19,12 +22,15 @@ import { CharacterDetailPageComponent } from './pages/characters-page/pages/char
     CharactersPageComponent,
     GalleryComponent,
     PaginationComponent,
-    CharacterDetailPageComponent
+    CharacterDetailPageComponent,
+    ContactPageComponent,
+    LocationsPageComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

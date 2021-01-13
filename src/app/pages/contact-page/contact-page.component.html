@@ -1,0 +1,30 @@
+<form [formGroup]="contactForm" (ngSubmit)="submitContactForm()">
+    <label for="name">Name</label>
+    <input type="text" id="name" formControlName="name">
+    <p *ngIf="submitted && !contactForm.get('name').valid">
+        Name is required and need to have min 3 characters.
+    </p>
+
+    <label for="email">Email</label>
+    <input type="text" id="email" formControlName="email">
+    <p *ngIf="submitted && !contactForm.get('email').valid">
+        Email is required and need to be email format.
+    </p>
+
+    <label for="phone">Phone</label>
+    <input type="text" id="phone" formControlName="phone">
+    <p *ngIf="submitted && !contactForm.get('email').valid">
+        Phone is required and need to be 9 characters.
+    </p>
+
+    <label for="description">Description</label>
+    <textarea formControlName="description" id="description" cols="30" rows="10"></textarea>
+    <p *ngIf="submitted && !contactForm.get('email').valid">
+        Description is required and need to be min 5 characters and max 255.
+    </p>
+
+    <div>
+        <input type="submit" value="Enviar">
+    </div>
+    <!--         <button>Enviar</button> -->
+</form>
