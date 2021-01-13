@@ -14,6 +14,7 @@ import { ContactPageComponent } from './pages/contact-page/contact-page.componen
 import { ReactiveFormsModule } from '@angular/forms';
 import { LocationsPageComponent } from './pages/locations-page/locations-page.component';
 import { FavoritesPageComponent } from './pages/favorites-page/favorites-page.component';
+import { LocationDetailPageComponent } from './pages/locations-page/pages/location-detail-page/location-detail-page.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { FavoritesPageComponent } from './pages/favorites-page/favorites-page.co
     CharacterDetailPageComponent,
     ContactPageComponent,
     LocationsPageComponent,
-    FavoritesPageComponent
+    FavoritesPageComponent,
+    LocationDetailPageComponent
   ],
   imports: [
     BrowserModule,
