@@ -1,7 +1,8 @@
-<nav>
-    <a routerLink="/">Home</a>
-    <a routerLink="/characters">Characters</a>
-    <a routerLink="/locations">Locations</a>
-    <a routerLink="/favorites">Favorites</a>
-    <a routerLink="/contact">Contact</a>
+<nav class="c-menu">
+    <a routerLink="/" class="c-menu__link" [routerLinkActiveOptions]="{ exact: true }"
+        routerLinkActive="c-menu__link--active">Home</a>
+    <a routerLink="/characters" class="c-menu__link" routerLinkActive="c-menu__link--active">Characters</a>
+    <a routerLink="/locations" class="c-menu__link" routerLinkActive="c-menu__link--active">Locations</a>
+    <a routerLink="/favorites" class="c-menu__link" routerLinkActive="c-menu__link--active">Favorites</a>
+    <a routerLink="/contact" class="c-menu__link" routerLinkActive="c-menu__link--active">Contact</a>
 </nav>

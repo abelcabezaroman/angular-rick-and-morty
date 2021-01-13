@@ -11,6 +11,7 @@ export class GalleryComponent implements OnInit {
   @Input() list;
   @Input() flagShowFavoriteButton: boolean = true;
 
+  newDate = new Date();
   
   constructor(private favoritesLocalService: FavoritesLocalService) { }
 
