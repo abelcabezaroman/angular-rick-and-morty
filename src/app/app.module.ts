@@ -13,6 +13,7 @@ import { CharacterDetailPageComponent } from './pages/characters-page/pages/char
 import { ContactPageComponent } from './pages/contact-page/contact-page.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { LocationsPageComponent } from './pages/locations-page/locations-page.component';
+import { FavoritesPageComponent } from './pages/favorites-page/favorites-page.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { LocationsPageComponent } from './pages/locations-page/locations-page.co
     PaginationComponent,
     CharacterDetailPageComponent,
     ContactPageComponent,
-    LocationsPageComponent
+    LocationsPageComponent,
+    FavoritesPageComponent
   ],
   imports: [
     BrowserModule,

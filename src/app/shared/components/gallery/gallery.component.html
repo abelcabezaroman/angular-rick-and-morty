@@ -4,6 +4,7 @@
             <figure class="c-gallery__figure" routerLink="/characters/{{item.id}}">
                 <img class="c-gallery__img" src="{{item.image ? item.image : 'assets/images/earth.png'}}" alt="{{item.name}}">
                 <figcaption class="c-gallery__text">{{item.name}}</figcaption>
+                <button (click)="addOrRemoveToFavorite($event, item)">{{flagShowFavoriteButton ? 'Add to Favorites' : 'Remove from favorites'}}</button>
             </figure>
         </div>
     </div>

@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { FavoritesLocalService } from '../../services/local/favorites-local.service';
 
 @Component({
   selector: 'app-gallery',
@@ -8,10 +9,23 @@ import { Component, Input, OnInit } from '@angular/core';
 export class GalleryComponent implements OnInit {
 
   @Input() list;
+  @Input() flagShowFavoriteButton: boolean = true;
+
   
-  constructor() { }
+  constructor(private favoritesLocalService: FavoritesLocalService) { }
 
   ngOnInit(): void {
+  }
+
+  addOrRemoveToFavorite($event, newFavorite){
+    $event.stopPropagation();
+
+    if(this.flagShowFavoriteButton){
+      this.favoritesLocalService.addFavorite(newFavorite);
+    } else{
+      this.favoritesLocalService.removeFavorite(newFavorite);
+    }
+ 
   }
 
 }
