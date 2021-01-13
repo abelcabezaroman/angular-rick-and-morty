@@ -6,6 +6,7 @@ import { ContactPageComponent } from './pages/contact-page/contact-page.componen
 import { FavoritesPageComponent } from './pages/favorites-page/favorites-page.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { LocationsPageComponent } from './pages/locations-page/locations-page.component';
+import { LocationDetailPageComponent } from './pages/locations-page/pages/location-detail-page/location-detail-page.component';
 
 const routes: Routes = [
   {path: '', component: HomePageComponent},
@@ -13,6 +14,7 @@ const routes: Routes = [
   {path: 'characters/:idCharacter', component: CharacterDetailPageComponent},
   {path: 'contact', component: ContactPageComponent},
   {path: 'locations', component: LocationsPageComponent},
+  {path: 'locations/:idLocation', component: LocationDetailPageComponent},
   {path: 'favorites', component: FavoritesPageComponent},
 
 ];
